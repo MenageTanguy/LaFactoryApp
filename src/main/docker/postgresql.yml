@@ -1,0 +1,11 @@
+version: '2'
+services:
+  lafactoryapp-postgresql:
+    image: postgres:12.1
+    # volumes:
+    #     - ~/volumes/jhipster/LaFactoryApp/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=LaFactoryApp
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
