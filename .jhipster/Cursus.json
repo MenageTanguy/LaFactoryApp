@@ -1,0 +1,73 @@
+{
+    "name": "Cursus",
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateDebut",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateFin",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "prerequis",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "objectifs",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contenu",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "salle",
+            "otherEntityRelationshipName": "cursus",
+            "relationshipName": "salle",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "stagiaire",
+            "otherEntityRelationshipName": "cursus",
+            "relationshipName": "stagiaires",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "module",
+            "otherEntityRelationshipName": "cursus",
+            "relationshipName": "modules",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "gestionnaire",
+            "otherEntityRelationshipName": "cursus",
+            "relationshipName": "gestionnaire",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200328111300",
+    "entityTableName": "cursus",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

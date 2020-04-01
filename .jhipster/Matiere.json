@@ -1,0 +1,74 @@
+{
+    "name": "Matiere",
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "duree",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "formateur",
+            "otherEntityRelationshipName": "matieres",
+            "relationshipName": "formateurs",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "module",
+            "otherEntityRelationshipName": "matieres",
+            "relationshipName": "modules",
+            "otherEntityField": "id",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "formateur",
+            "otherEntityRelationshipName": "matieresDebutant",
+            "relationshipName": "debutantMatieres",
+            "otherEntityField": "id",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "formateur",
+            "otherEntityRelationshipName": "matieresIntermedaire",
+            "relationshipName": "intermediaireMatieres",
+            "otherEntityField": "id",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "formateur",
+            "otherEntityRelationshipName": "matieresAvance",
+            "relationshipName": "avanceMatieres",
+            "otherEntityField": "id",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "formateur",
+            "otherEntityRelationshipName": "matieresConfirme",
+            "relationshipName": "confirmeMatieres",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20200328111400",
+    "entityTableName": "matiere",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

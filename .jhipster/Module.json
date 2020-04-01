@@ -1,0 +1,54 @@
+{
+    "name": "Module",
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateDebut",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateFin",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "matiere",
+            "otherEntityRelationshipName": "modules",
+            "relationshipName": "matieres",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "formateur",
+            "otherEntityRelationshipName": "modules",
+            "relationshipName": "formateurs",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "cursus",
+            "otherEntityRelationshipName": "modules",
+            "relationshipName": "cursus",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20200328111200",
+    "entityTableName": "module",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

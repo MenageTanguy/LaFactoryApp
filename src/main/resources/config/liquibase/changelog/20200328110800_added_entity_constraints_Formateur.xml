@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <!--
+        Added the constraints for entity Formateur.
+    -->
+    <changeSet id="20200328110800-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="formateur_id"
+                                 baseTableName="formateur_matieres_debutant"
+                                 constraintName="fk_formateur_matieres_debutant_formateur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="formateur"/>
+
+        <addForeignKeyConstraint baseColumnNames="matieres_debutant_id"
+                                 baseTableName="formateur_matieres_debutant"
+                                 constraintName="fk_formateur_matieres_debutant_matieres_debutant_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="matiere"/>
+        
+        <addForeignKeyConstraint baseColumnNames="formateur_id"
+                                 baseTableName="formateur_matieres_intermedaire"
+                                 constraintName="fk_formateur_matieres_intermedaire_formateur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="formateur"/>
+
+        <addForeignKeyConstraint baseColumnNames="matieres_intermedaire_id"
+                                 baseTableName="formateur_matieres_intermedaire"
+                                 constraintName="fk_formateur_matieres_intermedaire_matieres_intermedaire_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="matiere"/>
+        
+        <addForeignKeyConstraint baseColumnNames="formateur_id"
+                                 baseTableName="formateur_matieres_avance"
+                                 constraintName="fk_formateur_matieres_avance_formateur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="formateur"/>
+
+        <addForeignKeyConstraint baseColumnNames="matieres_avance_id"
+                                 baseTableName="formateur_matieres_avance"
+                                 constraintName="fk_formateur_matieres_avance_matieres_avance_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="matiere"/>
+        
+        <addForeignKeyConstraint baseColumnNames="formateur_id"
+                                 baseTableName="formateur_matieres_confirme"
+                                 constraintName="fk_formateur_matieres_confirme_formateur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="formateur"/>
+
+        <addForeignKeyConstraint baseColumnNames="matieres_confirme_id"
+                                 baseTableName="formateur_matieres_confirme"
+                                 constraintName="fk_formateur_matieres_confirme_matieres_confirme_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="matiere"/>
+        
+    </changeSet>
+</databaseChangeLog>

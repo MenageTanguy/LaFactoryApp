@@ -1,0 +1,52 @@
+{
+    "name": "Gestionnaire",
+    "fields": [
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prenom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "coordonnees",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numeroRue",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "rue",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "codePostal",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ville",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "cursus",
+            "otherEntityRelationshipName": "gestionnaire",
+            "relationshipName": "cursus"
+        }
+    ],
+    "changelogDate": "20200328111100",
+    "entityTableName": "gestionnaire",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

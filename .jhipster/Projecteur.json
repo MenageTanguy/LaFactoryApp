@@ -1,0 +1,38 @@
+{
+    "name": "Projecteur",
+    "fields": [
+        {
+            "fieldName": "code",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cout",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "stock",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "salle",
+            "otherEntityRelationshipName": "projecteur",
+            "relationshipName": "salle",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20200328111600",
+    "entityTableName": "projecteur",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

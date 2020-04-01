@@ -42,6 +42,35 @@ public class CacheConfiguration {
             createCache(cm, com.lafactory.app.domain.User.class.getName());
             createCache(cm, com.lafactory.app.domain.Authority.class.getName());
             createCache(cm, com.lafactory.app.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.lafactory.app.domain.Formateur.class.getName());
+            createCache(cm, com.lafactory.app.domain.Formateur.class.getName() + ".matieresDebutants");
+            createCache(cm, com.lafactory.app.domain.Formateur.class.getName() + ".matieresIntermedaires");
+            createCache(cm, com.lafactory.app.domain.Formateur.class.getName() + ".matieresAvances");
+            createCache(cm, com.lafactory.app.domain.Formateur.class.getName() + ".matieresConfirmes");
+            createCache(cm, com.lafactory.app.domain.Formateur.class.getName() + ".matieres");
+            createCache(cm, com.lafactory.app.domain.Formateur.class.getName() + ".modules");
+            createCache(cm, com.lafactory.app.domain.Stagiaire.class.getName());
+            createCache(cm, com.lafactory.app.domain.Stagiaire.class.getName() + ".cursuses");
+            createCache(cm, com.lafactory.app.domain.Technicien.class.getName());
+            createCache(cm, com.lafactory.app.domain.Gestionnaire.class.getName());
+            createCache(cm, com.lafactory.app.domain.Gestionnaire.class.getName() + ".cursuses");
+            createCache(cm, com.lafactory.app.domain.Module.class.getName());
+            createCache(cm, com.lafactory.app.domain.Module.class.getName() + ".matieres");
+            createCache(cm, com.lafactory.app.domain.Module.class.getName() + ".formateurs");
+            createCache(cm, com.lafactory.app.domain.Module.class.getName() + ".cursuses");
+            createCache(cm, com.lafactory.app.domain.Cursus.class.getName());
+            createCache(cm, com.lafactory.app.domain.Cursus.class.getName() + ".stagiaires");
+            createCache(cm, com.lafactory.app.domain.Cursus.class.getName() + ".modules");
+            createCache(cm, com.lafactory.app.domain.Matiere.class.getName());
+            createCache(cm, com.lafactory.app.domain.Matiere.class.getName() + ".formateurs");
+            createCache(cm, com.lafactory.app.domain.Matiere.class.getName() + ".modules");
+            createCache(cm, com.lafactory.app.domain.Matiere.class.getName() + ".debutantMatieres");
+            createCache(cm, com.lafactory.app.domain.Matiere.class.getName() + ".intermediaireMatieres");
+            createCache(cm, com.lafactory.app.domain.Matiere.class.getName() + ".avanceMatieres");
+            createCache(cm, com.lafactory.app.domain.Matiere.class.getName() + ".confirmeMatieres");
+            createCache(cm, com.lafactory.app.domain.Ordinateur.class.getName());
+            createCache(cm, com.lafactory.app.domain.Projecteur.class.getName());
+            createCache(cm, com.lafactory.app.domain.Salle.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

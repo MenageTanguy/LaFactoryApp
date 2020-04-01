@@ -1,0 +1,114 @@
+entity Formateur {
+id Integer,
+ nom String,
+prenom String,
+coordonnees String,
+ numeroRue Integer,
+ rue String,
+ codePostal String,
+ ville String,
+}
+entity Stagiaire {
+id Integer,
+ nom String,
+prenom String, 
+coordonnees String,
+ numeroRue Integer,
+ rue String,
+ codePostal String,
+ ville String
+}
+entity Technicien {
+id Integer,
+ nom String,
+prenom String, 
+coordonnees String,
+ numeroRue Integer,
+ rue String,
+ codePostal String,
+ ville String
+}
+entity Gestionnaire {
+id Integer,
+ nom String,
+prenom String, 
+coordonnees String,
+ numeroRue Integer,
+ rue String,
+ codePostal String,
+ ville String
+} 
+entity Module {
+ id Integer,
+ nom String,
+    dateDebut LocalDate,
+    dateFin LocalDate
+}
+entity Cursus {
+	id Integer,
+    nom String,
+    dateDebut LocalDate,
+    dateFin LocalDate,
+    prerequis String,
+    objectifs String,
+    contenu String
+}
+entity Matiere {
+	id Integer,
+    nom String,
+	duree Integer
+} 
+
+entity Ordinateur {
+	id Integer,
+	code String,
+    cout Float, 
+    processeur String,
+    ram Integer,
+    dd Integer,
+    dateAchat LocalDate,
+	stock Integer
+}
+
+
+entity Projecteur {
+	code String,
+    cout Float, 
+	id Integer,
+	stock Integer
+}
+entity Salle {
+code String,
+    cout Float, 
+id Integer,
+capaciteMax Integer
+}
+enum Niveau {
+    DEBUTANT, INTERMERDIAIRE, AVANCE, EXPERT
+  }
+
+relationship ManyToMany {
+Matiere{formateurs} to Formateur{matieres}, 
+Module{matieres} to Matiere{modules},
+Module{formateurs} to Formateur{modules}, 
+Cursus{stagiaires} to Stagiaire{cursus},
+Cursus{modules}	to Module{cursus} ,
+Formateur{matieresDebutant}to Matiere{debutantMatieres},
+Formateur{matieresIntermedaire}to Matiere{intermediaireMatieres},
+Formateur{matieresAvance}to Matiere{avanceMatieres},
+Formateur{matieresConfirme}to Matiere{confirmeMatieres}
+}  
+
+relationship OneToOne {
+Ordinateur to Stagiaire,
+Projecteur to Salle,
+Cursus to Salle
+
+}
+relationship OneToMany {
+Gestionnaire{cursus} to Cursus
+}
+
+service all with serviceImpl 
+ 
+
